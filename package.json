@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:viewport2": "npx cypress run ./e2e/login.cy.js --config-file cypress.env.config.js",
+    "chrome": "npx cypress run --browser chrome",
+    "electron": "npx cypress run --browser electron",
+    "chrome:head": "npx cypress run --browser chrome --headed",
+    "electron:head": "npx cypress run --browser electron --headed"
   },
   "keywords": [],
   "author": "",

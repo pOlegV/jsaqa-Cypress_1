@@ -35,3 +35,26 @@ Cypress.Commands.add('login', (email, password) => {
     
     cy.contains('Submit').click()
 })
+
+Cypress.Commands.add('addBook', (title, description, fileCover, fileBook, authors, favorite) => { 
+    cy.contains('Add new').click()
+    if (title) {
+        cy.get('#title').type(title)
+    }
+    if (description) {
+        cy.get('#description').type(description)
+    }
+    if (fileCover) {
+        cy.get('#fileCover').type(fileCover)
+    }
+    if (fileBook) {
+         cy.get('#fileBook').type(fileBook)
+    }
+    if (authors) {
+        cy.get('#authors').type(authors)
+    }
+    if (favorite) {
+        cy.get('#favorite').click()
+    }
+    cy.contains('Submit').click()
+})
